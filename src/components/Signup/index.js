@@ -15,8 +15,6 @@ const SignUp = () => {
                             <FormLabel htmlFor='for'>Password</FormLabel>
                             <FormInput type='password' required />
                             <FormButton type='submit'>Continue</FormButton>
-                            <Text>Forgot password</Text>
-                            <Text>Create new account</Text>
                         </Form>
                     </FormContent>
                 </FormWrap>
