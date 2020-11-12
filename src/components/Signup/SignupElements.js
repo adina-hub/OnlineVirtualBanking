@@ -2,7 +2,9 @@ import styled from 'styled-components'
 import {Link} from 'react-router-dom'
 
 export const Container = styled.div`
-    min-height: 692px;
+    height: 100%;
+    padding-left: 32px;
+    padding-top: 32px;
     position: fixed;
     bottom: 0;
     top: 0;
@@ -25,8 +27,6 @@ export const FormWrap = styled.div`
 `
 
 export const Icon = styled(Link)`
-    margin-left: 32px;
-    margin-top: 32px;
     text-decoration: none;
     color: #fff;
     font-weight: 700;
@@ -40,7 +40,9 @@ export const Icon = styled(Link)`
 
 export const FormContent = styled.div`
     height: 100%;
+    overflow: hidden;
     display: flex;
+    margin-bottom: 20px;
     flex-direction: column;
     justify-content: center;
 
@@ -51,7 +53,7 @@ export const FormContent = styled.div`
 
 export const Form = styled.form`
     background: #010101;
-    max-width: 400px;
+    max-width: 650px;
     height: auto;
     width: 100%;
     z-index: 1;
@@ -74,6 +76,12 @@ export const FormH1 = styled.h1`
     text-align: center;
 `
 
+export const DataContainer = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+`
+
 export const FormLabel = styled.label`
     margin-bottom: 8px;
     font-size: 14px;
@@ -81,8 +89,8 @@ export const FormLabel = styled.label`
 `
 
 export const FormInput = styled.input`
-    padding: 16px 16px;
-    margin-bottom: 32px;
+    padding: 10px 10px;
+    margin-bottom: 20px;
     border: none;
     border-radius: 4px;
 `

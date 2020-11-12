@@ -87,15 +87,6 @@ export const FormInput = styled.input`
     border-radius: 4px;
 `
 
-// export const FormButton = styled.button`
-//     background: #01bf71;
-//     padding: 16px 0;
-//     border: none;
-//     border-radius: 4px;
-//     color: #fff;
-//     font-size: 20px;
-//     cursor: pointer;
-// `
 
 export const Text = styled.span`
     text-align: center;
@@ -112,4 +103,6 @@ export const NavBtnLink = styled(LinkR)`
     color: #fff;
     font-size: 20px;
     cursor: pointer;
+    text-decoration: none;
+    text-align: center;
 `
