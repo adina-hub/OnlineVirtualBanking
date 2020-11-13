@@ -33,6 +33,18 @@ export const TextH2 = styled.h2`
     color: #000000;
 `
 
+export const Balance = styled.div`
+    display: flex; 
+    flex-direction: column;
+    padding-left: 20px;
+`
+
+export const Text = styled.h3`
+    font-size: 27px;
+    font-weight: 600;
+    margin: 10px 0 13px 20px;
+`
+
 export const NavbarMenu = styled.div`
     display: flex;
     flex-direction: column;

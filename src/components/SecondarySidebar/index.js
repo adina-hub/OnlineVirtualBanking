@@ -1,6 +1,6 @@
 import React from 'react'
 import {SidebarNavbar, UserInfo, Avatar, TextH2, NavbarMenu, NavbarElement, NavbarIcon, 
-    NavbarText} from './SecondarySidebarElements'
+    NavbarText, Balance, Text} from './SecondarySidebarElements'
 import {FaUser, FaCreditCard, FaExchangeAlt, FaSignOutAlt} from 'react-icons/fa'
 
 const SecondarySidebar = () => {
@@ -11,6 +11,10 @@ const SecondarySidebar = () => {
                     <Avatar></Avatar>
                     <TextH2>Leigh Anne</TextH2> 
                 </UserInfo>
+                <Balance>
+                    <TextH2>Balance</TextH2>
+                    <Text>$ 100,273.38</Text>
+                </Balance>
                 <NavbarMenu>
                     <NavbarElement>
                         <NavbarIcon><FaUser /></NavbarIcon>
