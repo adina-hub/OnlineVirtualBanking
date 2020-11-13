@@ -1,41 +1,33 @@
 import React from 'react'
-import { FaCreditCard, FaExchangeAlt, FaSignOutAlt, FaUser } from 'react-icons/fa'
-import {Container, SidebarContainer, MainContainer, SidebarNavbar, NavbarElement, NavbarMenu, 
-        Avatar, Text, UserInfo, NavbarIcons, NavbarIcon, NavbarElements} from './AccountHeroElements'
+import {MainContainer, TextH1, SecondaryContainer,
+        Data, UpdateButton, Label, FormInput, UpdateContainer, TextH4} from './AccountHeroElements'
+import {Avatar, TextH2, UserInfo} from '../SecondarySidebar/SecondarySidebarElements'
 
 const AccountHeroSection = () => {
 
     return (
         <>
-            <Container>
-                <SidebarContainer>
-                    <SidebarNavbar>
-                        <UserInfo>
-                           <Avatar></Avatar>
-                            <Text>Leigh Anne</Text> 
-                        </UserInfo>
-                        <NavbarMenu>
-                            <NavbarIcons>
-                                <NavbarIcon><FaUser /></NavbarIcon>
-                                <NavbarIcon><FaCreditCard /></NavbarIcon>
-                                <NavbarIcon><FaExchangeAlt /></NavbarIcon>
-                                <NavbarIcon><FaSignOutAlt /></NavbarIcon>
-                            </NavbarIcons>
-                            <NavbarElements>
-                                <NavbarElement to='/'>Account</NavbarElement>
-                                <NavbarElement to='/'>Cards</NavbarElement>
-                                <NavbarElement to='/'>Transactions</NavbarElement>
-                                <NavbarElement to='/'>Log Out</NavbarElement>
-                            </NavbarElements>
-                        </NavbarMenu>
-                    </SidebarNavbar>
-                </SidebarContainer>
                 <MainContainer>
-                    
+                    <TextH1>Account</TextH1>
+                    <SecondaryContainer>
+                       <UserInfo>
+                           <Avatar></Avatar>
+                           <UpdateContainer>
+                               <TextH2>Leigh Anne</TextH2>
+                               <TextH4>Update Photo</TextH4>
+                           </UpdateContainer>
+                       </UserInfo>
+                       <UpdateButton>Update Info</UpdateButton>
+                    </SecondaryContainer>
+                    <Data action="#">
+                        <Label>Full Name</Label>
+                        <FormInput type='text' value='Leigh Anne' />
+                        <Label>Email</Label>
+                        <FormInput type='email' value='anne.leigh@gmail.com' />
+                        <Label>Password</Label>
+                        <FormInput type='text' value='thisIsMyPassword80' />
+                    </Data>
                 </MainContainer>
-            </Container>
-           
-
         </>
     )
 }

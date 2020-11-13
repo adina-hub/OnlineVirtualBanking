@@ -1,6 +1,5 @@
 import React from 'react'
-import {Container, FormWrap, Icon, FormContent, Form, FormH1, FormInput, FormButton,
-       DataContainer} from './SignupElements'
+import {Container, FormWrap, Icon, FormContent, Form, FormH1, FormInput, FormButton} from './SignupElements'
 
 const SignUp = () => {
     return (
@@ -11,18 +10,10 @@ const SignUp = () => {
                     <FormContent> 
                         <Form action="#">
                             <FormH1>Register a new account</FormH1>
-                            <DataContainer>
-                                <FormInput type='text'  placeholder="First Name" required />
-                                <FormInput type='text' placeholder="Last Name" required />
-                            </DataContainer>
-                            <DataContainer>
-                                <FormInput type='text' placeholder="Address" required />
-                                <FormInput type='text' placeholder="Phone number" required />
-                            </DataContainer>
-                            <DataContainer>
-                                <FormInput type='email' placeholder="Email" required />
-                                <FormInput type='password' placeholder="Password" required />
-                            </DataContainer>
+                            <FormInput type='text'  placeholder="FullName" required />
+                            <FormInput type='text' placeholder="Email" required />
+                            <FormInput type='email' placeholder="Password" required />
+                            <FormInput type='password' placeholder="Confirm password" required />
                             <FormButton type='submit'>Continue</FormButton>
                         </Form>
                     </FormContent>

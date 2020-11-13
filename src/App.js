@@ -5,6 +5,8 @@ import SignInPage from './pages/signin';
 import Navbar from './components/Navbar';
 import AccountPage from './pages/account';
 import SignUpPage from './pages/signup';
+import CardsPage from './pages/cards';
+import TransactionsPage from './pages/transactions';
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
         <Route path="/signin" component={SignInPage} exact />
         <Route path="/signup" component={SignUpPage} exact />
         <Route path="/account" component={AccountPage} exact />
+        <Route path="/cards" component={CardsPage} exact />
+        <Route path="/transactions" component={TransactionsPage} exact />
       </Switch>
     </Router>
   );

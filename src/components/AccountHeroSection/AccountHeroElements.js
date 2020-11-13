@@ -14,68 +14,72 @@ export const Container = styled.div`
     flex-direction: row;
 `
 
-export const SidebarContainer = styled.div`
-    background-color: #C0C0C0;
-    flex: 0.2;
-`
-
 export const MainContainer = styled.div`
     background-color: #fff;
     flex: 0.8;
-`
-
-export const SidebarNavbar = styled.div`
-    height: 100vh;
     display: flex;
     flex-direction: column;
 `
 
-export const UserInfo = styled.div`
-    margin: 40px 20px;
+export const TextH1 = styled.h1`
+    font-size: 30px;
+    color: #000;
+    padding: 70px;
+`
+
+export const SecondaryContainer = styled.div`
     display: flex;
-    flex-direction: row;
     align-items: center;
+    justify-content: space-between;
+    padding-left: 30px;
+    width: 900px;
 `
 
-export const Avatar = styled.image`
-    vertical-align: middle;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-`
-
-export const Text = styled.h2`
-    margin-left: 20px;
-    font-size: 16px;
-    color: #000000;
-`
-
-export const NavbarMenu = styled.div`
-    display: flex;
-    flex-direction: row;
-`
-
-export const NavbarElements = styled.div`
-    display: flex;
-    flex-direction: column;
-`
-
-export const NavbarElement = styled(LinkR)`
-    padding: 16px 40px;
+export const UpdateButton = styled(LinkR)`
+    width: 150px;
+    height: 45px;
+    border: 2px solid #228B22;
+    border-radius: 5px;
+    color: #228B22;
     text-decoration: none;
-    color: 	#000000;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
+    font-size: 18px;
+    padding: 10px 25px;
+
+    &:hover {
+        background: #228B22;
+        color: #fff;
+    }
 `
 
-export const NavbarIcons = styled.div`
+export const Data = styled.form`
+    display: flex;
+    flex-direction: column;
+    padding-left: 70px;
+    width: 900px;
+`
+
+export const FormInput = styled.input`
+    padding: 16px 16px;
+    margin-bottom: 32px;
+    border-radius: 4px;
+    border: 2px solid #000;
+    width: 400px;
+`
+
+export const Label = styled.h3`
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #000;
+`
+
+export const UpdateContainer = styled.div`
     display: flex;
     flex-direction: column;
 `
 
-export const NavbarIcon = styled(LinkR)`
-    color: #000000;
-    font-size: 24px;
-    padding: 16px 40px;
+export const TextH4 = styled(LinkR)`
+    font-size: 10px;
+    padding-left: 20px;
+    padding-top: 10px;
+    color: #228B22;
 `
