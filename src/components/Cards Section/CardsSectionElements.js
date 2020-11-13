@@ -42,14 +42,19 @@ export const Icon = styled.img`
     border-radius: 7px;
     margin-bottom: 30px;
 
-    &:hover {
+    /* &:hover {
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         margin-top: -12px;
         cursor: pointer;
-    }
+    } */
 `
 
-export const Text = styled.h3`
+export const Text = styled(LinkR)`
     font-size: 15px;
+    text-decoration: none;
     color: #000;
+
+    &:hover {
+        color: #228B22;
+    }
 `

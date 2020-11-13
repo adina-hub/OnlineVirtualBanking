@@ -10,11 +10,11 @@ const CardsSection = () => {
             <CardsContainer>
                 <Card>
                     <Icon src={img} />
-                    <Text>Mastercard Gold</Text>
+                    <Text to='/cardDetails'>Mastercard Gold</Text>
                 </Card>
                 <Card>
                     <Icon src={img} />
-                    <Text>Visa</Text>
+                    <Text to='/cardDetails'>Visa</Text>
                 </Card>
             </CardsContainer>
         </MainContainer>

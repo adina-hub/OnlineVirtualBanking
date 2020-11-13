@@ -7,6 +7,7 @@ import AccountPage from './pages/account';
 import SignUpPage from './pages/signup';
 import CardsPage from './pages/cards';
 import TransactionsPage from './pages/transactions';
+import CardDetailsPage from './pages/cardDetails';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/account" component={AccountPage} exact />
         <Route path="/cards" component={CardsPage} exact />
         <Route path="/transactions" component={TransactionsPage} exact />
+        <Route path="/cardDetails" component={CardDetailsPage} exact />
       </Switch>
     </Router>
   );
