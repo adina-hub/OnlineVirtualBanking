@@ -8,7 +8,7 @@ const SignUp = () => {
             <Container>
                 <FormWrap>
                     <Icon to="/">dolla</Icon>
-                    <FormContent>
+                    <FormContent> 
                         <Form action="#">
                             <FormH1>Register a new account</FormH1>
                             <DataContainer>
