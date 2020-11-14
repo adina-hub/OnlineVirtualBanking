@@ -7,7 +7,8 @@ export const SidebarNavbar = styled.div`
     display: flex;
     flex-direction: column;
     background-color: #C0C0C0;
-    flex: 0.2;
+    flex: 0.25;
+
 `
 
 export const UserInfo = styled.div`
@@ -29,7 +30,7 @@ export const Avatar = styled.image`
 
 export const TextH2 = styled.h2`
     margin-left: 20px;
-    font-size: 20px;
+    font-size: 18px;
     color: #000000;
 `
 
@@ -48,7 +49,7 @@ export const Text = styled.h3`
 export const NavbarMenu = styled.div`
     display: flex;
     flex-direction: column;
-    margin-top: 50px;
+    margin-top: 30px;
 `
 
 export const NavbarElement = styled.div`

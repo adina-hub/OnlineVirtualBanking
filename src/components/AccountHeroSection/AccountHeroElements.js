@@ -4,7 +4,7 @@ import { Link as LinkR} from 'react-router-dom'
 export const Container = styled.div`
     min-height: 692px;
     position: fixed;
-    bottom: 0;
+    bottom: 0; 
     top: 0;
     left: 0;
     right: 0;
@@ -24,7 +24,7 @@ export const MainContainer = styled.div`
 export const TextH1 = styled.h1`
     font-size: 30px;
     color: #000;
-    padding: 70px;
+    padding: 50px 70px;
 `
 
 export const SecondaryContainer = styled.div`
@@ -32,7 +32,7 @@ export const SecondaryContainer = styled.div`
     align-items: center;
     justify-content: space-between;
     padding-left: 30px;
-    width: 900px;
+    width: 850px;
 `
 
 export const UpdateButton = styled(LinkR)`

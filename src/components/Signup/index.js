@@ -12,7 +12,7 @@ const SignUp = () => {
                             <FormH1>Register a new account</FormH1>
                             <FormInput type='text'  placeholder="FullName" required />
                             <FormInput type='text' placeholder="Email" required />
-                            <FormInput type='email' placeholder="Password" required />
+                            <FormInput type='password' placeholder="Password" required />
                             <FormInput type='password' placeholder="Confirm password" required />
                             <FormButton type='submit'>Continue</FormButton>
                         </Form>

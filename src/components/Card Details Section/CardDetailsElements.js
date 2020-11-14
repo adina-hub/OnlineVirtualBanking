@@ -15,7 +15,7 @@ export const RightContainer = styled.div`
     flex: 0.6;
     display: flex;
     flex-direction: column;
-    height: 550px;
+    height: 450px;
     border-left: 1px solid #C0C0C0;
     padding-top: 60px;
     padding-left: 60px;

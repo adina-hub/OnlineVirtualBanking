@@ -11,7 +11,7 @@ export const MainContainer = styled.div`
 export const TextH1 = styled.h1`
     font-size: 30px;
     color: #000;
-    padding: 70px;
+    padding: 50px 70px;
 `
 
 export const TextH2 = styled.h2`
