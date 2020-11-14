@@ -43,6 +43,7 @@ export const Balance = styled.div`
 export const Text = styled.h3`
     font-size: 23px;
     font-weight: 600;
+    color: #228B22;
     margin: 10px 0 10px 20px;
 `
 

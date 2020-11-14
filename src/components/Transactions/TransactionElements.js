@@ -24,12 +24,13 @@ export const NewTransaction = styled.div`
 `
 
 export const Button = styled(Link)`
-    font-size: 31px;
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     border-radius: 5px;
     color: #228B22;
+    font-size: 25px;
     border: 2px solid #228B22;
+    padding-top: 3px;
     text-decoration: none;
     text-align: center;
 

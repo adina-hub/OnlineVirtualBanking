@@ -1,5 +1,5 @@
 import React from 'react'
-import {FaEllipsisV} from 'react-icons/fa'
+import {FaEllipsisV, FaPlus} from 'react-icons/fa'
 import {MainContainer, TextH1, NewTransaction, Button, ButtonText, Text, HR, Transactions, Transaction, Details,
         Name, Date, Sum, EditIcon} from './TransactionElements'
 
@@ -8,7 +8,7 @@ const TransactionsSection = () => {
         <MainContainer>
             <TextH1>Transactions</TextH1>
             <NewTransaction>
-                <Button>+</Button>
+                <Button><FaPlus /></Button>
                 <ButtonText>New Transaction</ButtonText>
             </NewTransaction>
             <Text>History</Text>
