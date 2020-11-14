@@ -8,6 +8,7 @@ import SignUpPage from './pages/signup';
 import CardsPage from './pages/cards';
 import TransactionsPage from './pages/transactions';
 import CardDetailsPage from './pages/cardDetails';
+import TransactionDetailsPage from './pages/transactionDetails';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/cards" component={CardsPage} exact />
         <Route path="/transactions" component={TransactionsPage} exact />
         <Route path="/cardDetails" component={CardDetailsPage} exact />
+        <Route path="/transactionDetails" component={TransactionDetailsPage} exact />
       </Switch>
     </Router>
   );

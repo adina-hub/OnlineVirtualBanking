@@ -30,7 +30,7 @@ export const Avatar = styled.image`
 
 export const TextH2 = styled.h2`
     margin-left: 20px;
-    font-size: 18px;
+    font-size: 20px;
     color: #000000;
 `
 
@@ -41,9 +41,9 @@ export const Balance = styled.div`
 `
 
 export const Text = styled.h3`
-    font-size: 27px;
+    font-size: 23px;
     font-weight: 600;
-    margin: 10px 0 13px 20px;
+    margin: 10px 0 10px 20px;
 `
 
 export const NavbarMenu = styled.div`
@@ -55,7 +55,7 @@ export const NavbarMenu = styled.div`
 export const NavbarElement = styled.div`
     display: flex;
     margin-bottom: 15px;
-    margin-top: 20px;
+    margin-top: 15px;
 `
 
 export const NavbarText = styled(LinkR)`

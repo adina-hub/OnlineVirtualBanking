@@ -1,17 +1,17 @@
 import React from 'react'
 import { Container } from '../components/AccountHeroSection/AccountHeroElements'
 import SecondarySidebar from '../components/SecondarySidebar'
-import TransactionsSection from '../components/Transactions'
+import TransactionDetails from '../components/Transaction Details Section'
 
-const TransactionsPage = () => {
+const TransactionDetailsPage = () => {
     return (
         <>
-           <Container>
+            <Container>
                 <SecondarySidebar />
-                <TransactionsSection />
-           </Container>      
+                <TransactionDetails />
+            </Container>    
         </>
     )
 }
 
-export default TransactionsPage
+export default TransactionDetailsPage
