@@ -95,7 +95,7 @@ export const Text = styled.span`
     font-size: 14px;
 `
 
-export const NavBtnLink = styled(LinkR)`
+export const NavBtnLink = styled.button`
     background: #01bf71;
     padding: 16px 0;
     border: none;

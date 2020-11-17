@@ -6,7 +6,8 @@ export const SidebarNavbar = styled.div`
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: #C0C0C0;
+    /* background-color: #C0C0C0; */
+    background: linear-gradient(108deg, rgba(1, 147, 86, 1) 0%, rgba(10, 201, 122, 1) 100%);
     flex: 0.25;
 
 `
@@ -22,7 +23,7 @@ export const Avatar = styled.image`
     vertical-align: middle;
     width: 60px;
     height: 60px;
-    border-radius: 50%;
+    border-radius: 50%; 
     background-image: url(${img});
     background-position: center;
     background-size: cover;
@@ -43,7 +44,7 @@ export const Balance = styled.div`
 export const Text = styled.h3`
     font-size: 23px;
     font-weight: 600;
-    color: #228B22;
+    color: #fff;
     margin: 10px 0 10px 20px;
 `
 
@@ -55,22 +56,24 @@ export const NavbarMenu = styled.div`
 
 export const NavbarElement = styled.div`
     display: flex;
-    margin-bottom: 15px;
-    margin-top: 15px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+        background: #F5F5F5;
+    }
 `
 
-export const NavbarText = styled(LinkR)`
+export const NavbarText = styled.button`
     padding: 16px 40px;
     text-decoration: none;
     color: 	#000000;
     border: none;
     font-size: 20px;
     cursor: pointer;
-
-    &:hover {
-        color: #228B22;
-    }
-
+    background: transparent;
+    outline: none;
 `
 
 export const NavbarIcons = styled.div`
