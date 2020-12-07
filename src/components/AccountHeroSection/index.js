@@ -36,6 +36,20 @@ export default function AccountHeroSection() {
         firebase.database().ref('User/' + key).update({email: data}); 
     }
 
+    async function updateName(data) {
+        const snap = await firebase.database().ref('User').orderByChild('id').equalTo(auth.currentUser.uid).once("value");
+        var childData = snap.val();
+        var key = Object.keys(childData)[0];  
+        firebase.database().ref('User/' + key).update({fullname: data}); 
+    }
+
+    async function updatePasswordInfo(data) {
+        const snap = await firebase.database().ref('User').orderByChild('id').equalTo(auth.currentUser.uid).once("value");
+        var childData = snap.val();
+        var key = Object.keys(childData)[0];  
+        firebase.database().ref('User/' + key).update({password: data}); 
+    }
+
     async function handleSubmit(e) {
       e.preventDefault()
   
@@ -50,13 +64,21 @@ export default function AccountHeroSection() {
   
       if(emailRef.current.value !== currentUser.email) {
           promises.push(updateEmail(emailRef.current.value))
-          updateEmailInfo(emailRef.current.value)
       }
   
-      if(passwordRef.current.value) {
+      if(passwordRef.current.value === passwordConfirmRef.current.value) {
           promises.push(updatePassword(passwordRef.current.value))
+          if(passwordRef.current.value){
+              updatePasswordInfo(passwordRef.current.value)
+          }
       }
 
+      if(emailRef.current.value){
+        updateEmailInfo(emailRef.current.value)
+      }
+      if(nameRef.current.value){
+        updateName(nameRef.current.value)
+      }
 
       Promise.all(promises).then(() => {
         history.push('/account')
