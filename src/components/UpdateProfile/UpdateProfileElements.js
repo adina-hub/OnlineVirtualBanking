@@ -49,16 +49,11 @@ export const Data = styled.div`
     margin-top: 60px;
 `
 
-export const Label = styled.h3`
-    margin-bottom: 35px;
-    font-size: 14px;
-    color: #000;
-`
-
-
-export const Second = styled.div`
-    width: 400px;
-`
+// export const Label = styled.h3`
+//     margin-bottom: 35px;
+//     font-size: 14px;
+//     color: #000;
+// `
 
 export const Form = styled.form`
     max-width: 400px;
@@ -100,13 +95,12 @@ export const FormInput = styled.input`
     margin-bottom: 20px;
     border: 1px solid #D3D3D3;
     border-radius: 4px;
-    cursor: context-menu;
 `
 
 export const NavBtnLink = styled.button`
     background: #01bf71;
     padding: 10px 0;
-    margin-top: 130px;
+    margin-top: 60px;
     width: 150px;
     border: none;
     border-radius: 4px;

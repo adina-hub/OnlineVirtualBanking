@@ -6,6 +6,7 @@ import AccountPage from '../pages/account';
 import Home from '../pages/index'
 import SignUpPage from '../pages/signup';
 import CardsPage from '../pages/cards';
+import UpdateProfilePage from '../pages/updateProfile';
 import TransactionsPage from '../pages/transactions';
 import CardDetailsPage from '../pages/cardDetails';
 import TransactionDetailsPage from '../pages/transactionDetails';
@@ -24,6 +25,7 @@ function App() {
               <Route path="/signup" component={SignUpPage} />
               <Route path="/forgot-password" component={ForgotPassword} />
               <PrivateRoute path="/account" component={AccountPage} />
+              <PrivateRoute path="/update-profile" component={UpdateProfilePage} />
               <PrivateRoute path="/cards" component={CardsPage} exact />
               <PrivateRoute path="/transactions" component={TransactionsPage} />
               <PrivateRoute path="/cardDetails" component={CardDetailsPage} />
