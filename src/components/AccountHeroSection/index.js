@@ -30,13 +30,10 @@ export default function AccountHeroSection() {
     }, [])
 
     async function updateEmailInfo(data) {
-        // const userRef = firebase.database().ref('User').orderByChild('id').equalTo(auth.currentUser.uid).once("value", function(snap) {
-        //     snap.ref.update({ email: data })
-        //   });
         const snap = await firebase.database().ref('User').orderByChild('id').equalTo(auth.currentUser.uid).once("value");
         var childData = snap.val();
         var key = Object.keys(childData)[0];  
-        firebase.database().ref('User/' + key).update({email: data});
+        firebase.database().ref('User/' + key).update({email: data}); 
     }
 
     async function handleSubmit(e) {
