@@ -6,7 +6,6 @@ export const SidebarNavbar = styled.div`
     height: 100vh;
     display: flex;
     flex-direction: column;
-    /* background-color: #C0C0C0; */
     background: linear-gradient(108deg, rgba(1, 147, 86, 1) 0%, rgba(10, 201, 122, 1) 100%);
     flex: 0.25;
 

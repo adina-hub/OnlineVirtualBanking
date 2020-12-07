@@ -1,6 +1,6 @@
 import React, {useRef, useState} from 'react'
-import {Container, FormWrap, Icon, FormContent, Form, FormH1, FormLabel, FormInput, Text, NavBtnLink} from './SigninElements'
-import {Link, useHistory} from 'react-router-dom'
+import {Container, FormWrap, Icon, FormContent, Form, FormH1, FormLabel, FormInput, Text, NavBtnLink, FLink} from './SigninElements'
+import {useHistory, Link} from 'react-router-dom'
 import {Alert} from '../Signup/SignupElements'
 import { useAuth } from "../../context/AuthContext"
 
@@ -41,7 +41,7 @@ export default function SignIn() {
                             <FormLabel id="password">Password</FormLabel>
                             <FormInput type="password" ref={passwordRef} required />
                             <NavBtnLink type="submit" disabled={loading}>Sign In</NavBtnLink>
-                            <Link to='/forgot-password'>Forgot password?</Link>
+                            <FLink to='/forgot-password'>Forgot password?</FLink>
                             <Text>Need an account? <Link to='/signup'>Sign Up</Link></Text>
                         </Form>
                     </FormContent>

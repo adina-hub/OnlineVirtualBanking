@@ -72,7 +72,7 @@ export const FormH1 = styled.h1`
     font-size: 20px;
     font-weight: 400;
     text-align: center;
-`
+` 
 
 export const FormLabel = styled.label`
     margin-bottom: 8px;
@@ -105,4 +105,14 @@ export const NavBtnLink = styled.button`
     cursor: pointer;
     text-decoration: none;
     text-align: center;
+`
+export const FLink = styled.a`
+    margin: 20px auto 0 auto;
+    color: white;
+    cursor: pointer;
+
+    &:hover {
+        color: blue;
+        transition: 0.15s ease-in-out;
+    }
 `

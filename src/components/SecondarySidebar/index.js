@@ -1,15 +1,29 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import {SidebarNavbar, UserInfo, Avatar, TextH2, NavbarMenu, NavbarElement, NavbarIcon, 
     NavbarText, Balance, Text} from './SecondarySidebarElements'
 import {FaUser, FaCreditCard, FaExchangeAlt, FaSignOutAlt} from 'react-icons/fa'
 import {useHistory} from 'react-router-dom'
 import { Alert } from '../Signup/SignupElements'
 import { useAuth } from "../../context/AuthContext"
+import firebase from 'firebase'
+import { auth } from '../../firebase'
 
 export default function SecondarySidebar() {
     const [error, setError] = useState("")
     const { logout } = useAuth()
+    const [user, setUser] = useState('')
+
     const history = useHistory()
+
+    useEffect(() => {
+        async function getUser() {
+            const snap = await firebase.database().ref('User').orderByChild('id').equalTo(auth.currentUser.uid).once("value")
+            var childData = snap.val();
+            var key = Object.keys(childData)[0];   
+            setUser(childData[key]);
+        }
+        getUser()
+    }, [])
 
     async function handleLogout() {
         setError('')
@@ -39,7 +53,7 @@ export default function SecondarySidebar() {
             <SidebarNavbar>
                 <UserInfo>
                     <Avatar></Avatar>
-                    <TextH2>Leigh Anne</TextH2> 
+                    <TextH2>{user.fullname}</TextH2> 
                 </UserInfo>
                 <Balance>
                     <TextH2>Balance</TextH2>

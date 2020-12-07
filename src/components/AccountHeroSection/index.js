@@ -1,11 +1,14 @@
-import React, {useRef, useState} from 'react'
+import React, {useRef, useState, useEffect} from 'react'
+import firebase from 'firebase'
 import {MainContainer, TextH1, Second, Label, Data , UserInfo, Form, Alert, NavBtnLink,
        FormLabel, FormInput, SecondaryContainer, AvatarContainer} from './AccountHeroElements'
 import {Avatar, TextH2} from '../SecondarySidebar/SecondarySidebarElements'
 import { useAuth } from "../../context/AuthContext"
 import {useHistory} from 'react-router-dom'
+import { auth } from '../../firebase'
 
-const AccountHeroSection = () => {
+export default function AccountHeroSection() {
+    const nameRef = useRef()
     const emailRef = useRef()
     const passwordRef = useRef()
     const passwordConfirmRef = useRef()
@@ -13,8 +16,29 @@ const AccountHeroSection = () => {
     const [error, setError] = useState("")
     const [message, setMessage] = useState("")
     const [loading, setLoading] = useState(false)
+    const [user, setUser] = useState('')
     const history = useHistory()
-  
+
+    useEffect(() => {
+        async function getUser() {
+            const snap = await firebase.database().ref('User').orderByChild('id').equalTo(auth.currentUser.uid).once("value")
+            var childData = snap.val();
+            var key = Object.keys(childData)[0];   
+            setUser(childData[key]);
+        }
+        getUser()
+    }, [])
+
+    async function updateEmailInfo(data) {
+        // const userRef = firebase.database().ref('User').orderByChild('id').equalTo(auth.currentUser.uid).once("value", function(snap) {
+        //     snap.ref.update({ email: data })
+        //   });
+        const snap = await firebase.database().ref('User').orderByChild('id').equalTo(auth.currentUser.uid).once("value");
+        var childData = snap.val();
+        var key = Object.keys(childData)[0];  
+        firebase.database().ref('User/' + key).update({email: data});
+    }
+
     async function handleSubmit(e) {
       e.preventDefault()
   
@@ -29,12 +53,14 @@ const AccountHeroSection = () => {
   
       if(emailRef.current.value !== currentUser.email) {
           promises.push(updateEmail(emailRef.current.value))
+          updateEmailInfo(emailRef.current.value)
       }
   
       if(passwordRef.current.value) {
           promises.push(updatePassword(passwordRef.current.value))
       }
-  
+
+
       Promise.all(promises).then(() => {
         history.push('/account')
         setMessage("Info updated!")
@@ -55,11 +81,11 @@ const AccountHeroSection = () => {
                         <UserInfo>
                             <AvatarContainer>
                                 <Avatar></Avatar>
-                                <TextH2>Leigh Anne</TextH2> 
+                                <TextH2>{user.fullname}</TextH2> 
                             </AvatarContainer>
                             <Data>
-                                <Label>Full Name: </Label>
-                                <Label>Email: {currentUser.email}</Label>  
+                                <Label>Full Name: {user.fullname}</Label>
+                                <Label>Email: {user.email} </Label>  
                             </Data>
                         </UserInfo>
                         <Second>
@@ -67,6 +93,8 @@ const AccountHeroSection = () => {
                                 <Form onSubmit={handleSubmit}>
                                     {message && <Alert>{message}</Alert>}
                                     {error && <Alert>{error}</Alert>}
+                                    <FormLabel id="name">Full Name</FormLabel>
+                                    <FormInput type='text' ref={nameRef}/>
                                     <FormLabel id="email">Email</FormLabel>
                                     <FormInput type='email' ref={emailRef} placeholder="Leave blank to keep the same" />
                                     <FormLabel id="password">Password</FormLabel>
@@ -83,4 +111,3 @@ const AccountHeroSection = () => {
     )
 }
 
-export default AccountHeroSection
