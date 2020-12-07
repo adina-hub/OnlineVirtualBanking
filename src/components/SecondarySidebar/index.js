@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import {SidebarNavbar, UserInfo, Avatar, TextH2, NavbarMenu, NavbarElement, NavbarIcon, 
-    NavbarText, Balance, Text} from './SecondarySidebarElements'
+    NavbarText} from './SecondarySidebarElements'
 import {FaUser, FaCreditCard, FaExchangeAlt, FaSignOutAlt} from 'react-icons/fa'
 import {useHistory} from 'react-router-dom'
 import { Alert } from '../Signup/SignupElements'
@@ -55,11 +55,6 @@ export default function SecondarySidebar() {
                     <Avatar></Avatar>
                     <TextH2>{user.fullname}</TextH2> 
                 </UserInfo>
-                <Balance>
-                    <TextH2>Balance</TextH2>
-                    <Text>$ 100,273.38</Text>
-                    {error && <Alert>{error}</Alert>}
-                </Balance>
                 <NavbarMenu>
                     <NavbarElement>
                         <NavbarIcon><FaUser /></NavbarIcon>

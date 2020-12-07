@@ -1,18 +1,5 @@
 import styled from 'styled-components'
 
-export const Container = styled.div`
-    min-height: 692px;
-    position: fixed;
-    bottom: 0; 
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 0;
-    overflow: hidden;
-    display: flex;
-    flex-direction: row; 
-`
-
 export const MainContainer = styled.div`
     background-color: #fff;
     flex: 0.8;
@@ -20,44 +7,13 @@ export const MainContainer = styled.div`
     flex-direction: column;
 `
 
-export const TextH1 = styled.h1`
-    font-size: 30px;
+export const FormH1 = styled.h1`
+    font-size: 28px;
     color: #000;
-    padding: 50px 70px;
-`
-
-export const SecondaryContainer = styled.div`
-    display: flex;
-    margin-top: 20px;
-`
-
-export const UserInfo = styled.div`
-    display: flex;
-    flex-direction: column;
     padding-left: 70px;
-    width: 600px;
-`
-
-export const AvatarContainer = styled.div`
-    display: flex;
-    align-items: center;
-`
-
-export const Data = styled.div`
-    display: flex;
-    flex-direction: column;
-    margin-top: 60px;
-`
-
-export const Label = styled.h3`
-    margin-bottom: 35px;
-    font-size: 14px;
-    color: #000;
-`
-
-
-export const Second = styled.div`
-    width: 400px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    
 `
 
 export const Form = styled.form`
@@ -66,6 +22,7 @@ export const Form = styled.form`
     z-index: 1;
     display: grid;
     margin: 0;
+    margin-left: 200px;
     
     @media screen and (max-width: 400px) {
         padding: 32px 32px;
@@ -81,14 +38,6 @@ export const Alert = styled.div`
     border-radius: 4px;
 `
 
-export const FormH1 = styled.h1`
-    margin-bottom: 40px;
-    color: black;
-    font-size: 20px;
-    font-weight: 400;
-    text-align: center;
-`
-
 export const FormLabel = styled.label`
     margin-bottom: 8px;
     font-size: 14px;
@@ -100,13 +49,12 @@ export const FormInput = styled.input`
     margin-bottom: 20px;
     border: 1px solid #D3D3D3;
     border-radius: 4px;
-    cursor: context-menu;
 `
 
 export const NavBtnLink = styled.button`
     background: #01bf71;
     padding: 10px 0;
-    margin-top: 10px;
+    margin: 40px auto;
     width: 150px;
     border: none;
     border-radius: 4px;
@@ -116,3 +64,28 @@ export const NavBtnLink = styled.button`
     text-decoration: none;
     text-align: center;
 `
+export const SelectContainer = styled.div`
+    display: flex;
+    align-items: center;
+`
+
+export const Select = styled.select`
+  width: 100px;
+  height: 35px;
+  background: white;
+  color: gray;
+  border: 1px solid #D3D3D3;
+  border-radius: 4px;
+  padding-left: 5px;
+  font-size: 14px;
+  margin-left: 50px;
+
+  option {
+    color: black;
+    background: white;
+    display: flex;
+    white-space: pre;
+    min-height: 20px;
+    padding: 0px 2px 1px;
+  }
+`;

@@ -100,7 +100,7 @@ export const FormInput = styled.input`
 export const NavBtnLink = styled.button`
     background: #01bf71;
     padding: 10px 0;
-    margin-top: 60px;
+    margin-top: 10px;
     width: 150px;
     border: none;
     border-radius: 4px;

@@ -12,6 +12,7 @@ export default function AccountHeroSection() {
     const [user, setUser] = useState('')
     const history = useHistory()
 
+
     useEffect(() => {
         async function getUser() {
             const snap = await firebase.database().ref('User').orderByChild('id').equalTo(auth.currentUser.uid).once("value")
@@ -34,7 +35,7 @@ export default function AccountHeroSection() {
                         <UserInfo>
                             <AvatarContainer>
                                 <Avatar></Avatar>
-                                <TextH2>{user.fullname}</TextH2> 
+                                <TextH2>{user.fullname}</TextH2>
                             </AvatarContainer>
                             <Data>
                                 <Form onSubmit={handleEdit}>

@@ -3,12 +3,12 @@ import {FaEllipsisV, FaPlus} from 'react-icons/fa'
 import {MainContainer, TextH1, NewTransaction, Button, ButtonText, Text, HR, Transactions, Transaction, Details,
         Name, Date, Sum, EditIcon} from './TransactionElements'
 
-const TransactionsSection = () => {
+export default function TransactionsSection() {
     return (
         <MainContainer>
             <TextH1>Transactions</TextH1>
             <NewTransaction>
-                <Button><FaPlus /></Button>
+                <Button to='/new-transaction'><FaPlus /></Button>
                 <ButtonText>New Transaction</ButtonText>
             </NewTransaction>
             <Text>History</Text>
@@ -35,4 +35,3 @@ const TransactionsSection = () => {
     )
 }
 
-export default TransactionsSection

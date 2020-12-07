@@ -8,6 +8,7 @@ import SignUpPage from '../pages/signup';
 import CardsPage from '../pages/cards';
 import UpdateProfilePage from '../pages/updateProfile';
 import TransactionsPage from '../pages/transactions';
+import NewTransactionPage from '../pages/newTransaction';
 import CardDetailsPage from '../pages/cardDetails';
 import TransactionDetailsPage from '../pages/transactionDetails';
 import { AuthProvider } from '../context/AuthContext';
@@ -28,6 +29,7 @@ function App() {
               <PrivateRoute path="/update-profile" component={UpdateProfilePage} />
               <PrivateRoute path="/cards" component={CardsPage} exact />
               <PrivateRoute path="/transactions" component={TransactionsPage} />
+              <PrivateRoute path="/new-transaction" component={NewTransactionPage} />
               <PrivateRoute path="/cardDetails" component={CardDetailsPage} />
               <PrivateRoute path="/transactionDetails" component={TransactionDetailsPage} />
             </Switch>

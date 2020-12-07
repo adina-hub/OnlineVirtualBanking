@@ -7,7 +7,7 @@ export const SidebarNavbar = styled.div`
     display: flex;
     flex-direction: column;
     background: linear-gradient(108deg, rgba(1, 147, 86, 1) 0%, rgba(10, 201, 122, 1) 100%);
-    flex: 0.25;
+    flex: 0.27;
 
 `
 
@@ -50,13 +50,13 @@ export const Text = styled.h3`
 export const NavbarMenu = styled.div`
     display: flex;
     flex-direction: column;
-    margin-top: 30px;
+    margin-top: 60px;
 `
 
 export const NavbarElement = styled.div`
     display: flex;
-    padding-bottom: 15px;
-    padding-top: 15px;
+    padding-bottom: 20px;
+    padding-top: 20px;
     transition: 0.3s ease-in-out;
 
     &:hover {
