@@ -20,7 +20,7 @@ export default function NewTransactionSection() {
             to: from,
             value: value,
             currency: currency,
-            date: new Date(firebase.firestore.Timestamp.now().seconds*1000).toLocaleDateString('en-US')
+            date: new Date(firebase.firestore.Timestamp.now().seconds*1000).toLocaleDateString()
         })
     }
 

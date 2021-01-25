@@ -1,9 +1,35 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import {FaEllipsisV, FaPlus} from 'react-icons/fa'
 import {MainContainer, TextH1, NewTransaction, Button, ButtonText, Text, HR, Transactions, Transaction, Details,
         Name, Date, Sum, EditIcon} from './TransactionElements'
+import firebase from 'firebase'
+
 
 export default function TransactionsSection() {
+    const [transactions, setTransactions] = useState([])
+
+    useEffect(() => {
+        async function getTransactions() {
+            var array = []
+            await firebase.database().ref('Transaction').once("value").then((snapshot) => {
+                        snapshot.forEach(function(childSnapshot) {
+                            var childData = childSnapshot.val();
+                            var form = {
+                                id: childSnapshot.key,
+                                title: childData.title,
+                                from: childData.from,
+                                to: childData.to,
+                                value: childData.value,
+                                date: childData.date
+                            }
+                            array.push(form)
+                        });
+                        setTransactions(array);   
+            });
+        };
+        getTransactions()
+    }, [])
+    console.log(transactions);
     return (
         <MainContainer>
             <TextH1>Transactions</TextH1>
