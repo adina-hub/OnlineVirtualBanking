@@ -10,6 +10,7 @@ export default function AccountHeroSection() {
     const nameRef = useRef()
     const emailRef = useRef()
     const [user, setUser] = useState('')
+
     const history = useHistory()
 
 
