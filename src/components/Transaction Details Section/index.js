@@ -1,9 +1,11 @@
 import React from 'react'
 import { MainContainer, TextH1 } from '../AccountHeroSection/AccountHeroElements'
 import {Info, Label, Value} from './TransactionDetailsElements'
+import { useParams } from 'react-router-dom';
 
 const TransactionDetails = () => {
-    
+    const url = useParams();
+    console.log(url.id)
     return (
         <MainContainer>
             <TextH1>Transactions</TextH1>
