@@ -18,6 +18,7 @@ export default function AccountHeroSection() {
         async function getUser() {
             const snap = await firebase.database().ref('User').orderByChild('id').equalTo(auth.currentUser.uid).once("value")
             var childData = snap.val();
+            console.log(childData);
             var key = Object.keys(childData)[0];   
             setUser(childData[key]);
         }
