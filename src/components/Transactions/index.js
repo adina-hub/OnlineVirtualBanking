@@ -41,7 +41,7 @@ export default function TransactionsSection() {
                         <Name>{transactions[i].title}</Name>
                         <Date>{transactions[i].date}</Date> 
                     </Details>
-                    <Sum>{transactions[i].value}</Sum>
+                    <Sum>{transactions[i].value} lei</Sum>
                     <EditIcon to={'/transactionDetails/' + transactions[i].id}><FaEllipsisV /></EditIcon>
                 </Transaction>
             );

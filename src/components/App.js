@@ -30,7 +30,7 @@ function App() {
               <PrivateRoute path="/cards" component={CardsPage} exact />
               <PrivateRoute path="/transactions" component={TransactionsPage} />
               <PrivateRoute path="/new-transaction" component={NewTransactionPage} />
-              <PrivateRoute path="/cardDetails" component={CardDetailsPage} />
+              <PrivateRoute path="/cardDetails/:id" component={CardDetailsPage} />
               <PrivateRoute path="/transactionDetails/:id" component={TransactionDetailsPage} />
             </Switch>
           </AuthProvider>

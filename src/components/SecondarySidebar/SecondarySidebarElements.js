@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { Link as LinkR} from 'react-router-dom'
-import img from '../../images/avatar.jpg'
+import img from '../../images/user.png'
 
 export const SidebarNavbar = styled.div`
     height: 100vh;
