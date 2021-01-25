@@ -3,12 +3,15 @@ import {FaEllipsisV, FaPlus} from 'react-icons/fa'
 import {MainContainer, TextH1, NewTransaction, Button, ButtonText, Text, HR, Transactions, Transaction, Details,
         Name, Date, Sum, EditIcon} from './TransactionElements'
 import firebase from 'firebase'
+import { auth } from '../../firebase'
+
+
 export default function TransactionsSection() {
     const [transactions, setTransactions] = useState([])
     useEffect(() => {
         async function getTransactions() {
             var array = []
-            await firebase.database().ref('Transaction').once("value").then((snapshot) => {
+            await firebase.database().ref('Transaction').orderByChild("customerId").equalTo(auth.currentUser.uid).once("value").then((snapshot) => {
                         snapshot.forEach(function(childSnapshot) {
                             var childData = childSnapshot.val();
                             var form = {
@@ -26,7 +29,26 @@ export default function TransactionsSection() {
         };
         getTransactions()
     }, [])
+
     console.log(transactions);
+
+    function displayTrans(transactions) {
+        let arrayy = [];
+        for(let i=0; i<transactions.length; i++){
+            arrayy.push(
+                <Transaction>
+                    <Details>
+                        <Name>{transactions[i].title}</Name>
+                        <Date>{transactions[i].date}</Date> 
+                    </Details>
+                    <Sum>{transactions[i].value}</Sum>
+                    <EditIcon to={'/transactionDetails/' + transactions[i].id}><FaEllipsisV /></EditIcon>
+                </Transaction>
+            );
+        }
+        return arrayy;
+    }
+    var list = displayTrans(transactions);
     return (
         <MainContainer>
             <TextH1>Transactions</TextH1>
@@ -37,22 +59,7 @@ export default function TransactionsSection() {
             <Text>History</Text>
             <HR />
             <Transactions>
-                <Transaction>
-                    <Details>
-                        <Name>Amazon Support</Name>
-                        <Date>13 Sep 2020 at 15:45 PM</Date> 
-                    </Details>
-                    <Sum>-2,320$</Sum>
-                    <EditIcon to='/transactionDetails'><FaEllipsisV /></EditIcon>
-                </Transaction>
-                <Transaction>
-                    <Details>
-                        <Name>Roland GmbH</Name>
-                        <Date>11 Sep 2020 at 11:25 AM</Date> 
-                    </Details>
-                    <Sum>+500$</Sum>
-                    <EditIcon to='/transactionDetails'><FaEllipsisV /></EditIcon>
-                </Transaction>
+                {list}
             </Transactions>
         </MainContainer>
     )

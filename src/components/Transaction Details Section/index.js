@@ -3,6 +3,7 @@ import { MainContainer, TextH1 } from '../AccountHeroSection/AccountHeroElements
 import {Info, Label, Value} from './TransactionDetailsElements'
 
 const TransactionDetails = () => {
+    
     return (
         <MainContainer>
             <TextH1>Transactions</TextH1>

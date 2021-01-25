@@ -31,7 +31,7 @@ function App() {
               <PrivateRoute path="/transactions" component={TransactionsPage} />
               <PrivateRoute path="/new-transaction" component={NewTransactionPage} />
               <PrivateRoute path="/cardDetails" component={CardDetailsPage} />
-              <PrivateRoute path="/transactionDetails" component={TransactionDetailsPage} />
+              <PrivateRoute path="/transactionDetails/:id" component={TransactionDetailsPage} />
             </Switch>
           </AuthProvider>
           
