@@ -3,11 +3,8 @@ import {FaEllipsisV, FaPlus} from 'react-icons/fa'
 import {MainContainer, TextH1, NewTransaction, Button, ButtonText, Text, HR, Transactions, Transaction, Details,
         Name, Date, Sum, EditIcon} from './TransactionElements'
 import firebase from 'firebase'
-
-
 export default function TransactionsSection() {
     const [transactions, setTransactions] = useState([])
-
     useEffect(() => {
         async function getTransactions() {
             var array = []
@@ -60,4 +57,3 @@ export default function TransactionsSection() {
         </MainContainer>
     )
 }
-
