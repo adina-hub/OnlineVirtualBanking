@@ -16,7 +16,6 @@ export function AuthProvider({ children }) {
         return auth.createUserWithEmailAndPassword(email, password).then(function(response) {
             firebase.database().ref('User').push({
                 email: email,
-                password: password,
                 id: auth.currentUser.uid,
                 fullname: name
             })

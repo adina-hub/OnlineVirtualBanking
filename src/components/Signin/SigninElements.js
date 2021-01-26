@@ -106,7 +106,7 @@ export const NavBtnLink = styled.button`
     text-decoration: none;
     text-align: center;
 `
-export const FLink = styled.a`
+export const FLink = styled(LinkR)`
     margin: 20px auto 0 auto;
     color: white;
     cursor: pointer;

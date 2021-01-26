@@ -13,7 +13,7 @@ import CardDetailsPage from '../pages/cardDetails';
 import TransactionDetailsPage from '../pages/transactionDetails';
 import { AuthProvider } from '../context/AuthContext';
 import PrivateRoute from './PrivateRoute';
-import ForgotPassword from './ForgotPassword';
+import ForgotPage from '../pages/forgotPass';
 
 function App() {
   return (
@@ -24,7 +24,7 @@ function App() {
               <Route path="/" component={Home} exact />
               <Route path="/signin" component={SignInPage} />
               <Route path="/signup" component={SignUpPage} />
-              <Route path="/forgot-password" component={ForgotPassword} />
+              <Route path="/forgot-password" component={ForgotPage} />
               <PrivateRoute path="/account" component={AccountPage} />
               <PrivateRoute path="/update-profile" component={UpdateProfilePage} />
               <PrivateRoute path="/cards" component={CardsPage} exact />
