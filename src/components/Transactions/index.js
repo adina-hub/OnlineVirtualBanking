@@ -20,7 +20,8 @@ export default function TransactionsSection() {
                                 from: childData.from,
                                 to: childData.to,
                                 value: childData.value,
-                                date: childData.date
+                                date: childData.date,
+                                currency: childData.currency
                             }
                             array.push(form)
                         });
@@ -29,8 +30,6 @@ export default function TransactionsSection() {
         };
         getTransactions()
     }, [])
-
-    console.log(transactions);
 
     function displayTrans(transactions) {
         let arrayy = [];
@@ -41,7 +40,7 @@ export default function TransactionsSection() {
                         <Name>{transactions[i].title}</Name>
                         <Date>{transactions[i].date}</Date> 
                     </Details>
-                    <Sum>{transactions[i].value} lei</Sum>
+                    <Sum>{transactions[i].value} {transactions[i].currency}</Sum>
                     <EditIcon to={'/transactionDetails/' + transactions[i].id}><FaEllipsisV /></EditIcon>
                 </Transaction>
             );

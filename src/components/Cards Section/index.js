@@ -23,7 +23,7 @@ const CardsSection = () => {
             <TextH2>Active cards</TextH2>
             <CardsContainer>
                 <Card>
-                    <Icon src={img} />
+                    <Icon to={'/cardDetails/' + auth.currentUser.uid} src={img} />
                     <Text to={'/cardDetails/' + auth.currentUser.uid}>{card.Type}</Text>
                 </Card>
             </CardsContainer>

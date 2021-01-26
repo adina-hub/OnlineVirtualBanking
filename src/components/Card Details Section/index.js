@@ -32,7 +32,7 @@ const CardDetailsSection = () => {
                     <ExpirationDate>
                         <Label>Expiration Date:</Label>
                         <Date>{card.ExpDate}</Date>
-                    </ExpirationDate>
+                    </ExpirationDate> 
                 </LeftContainer>
                 <RightContainer>
                     <Iban>
@@ -45,8 +45,8 @@ const CardDetailsSection = () => {
                     </Cvv>
                     <MoneyContainer>
                         <Sum>
-                            <SumText>Available</SumText>
-                            <SumText>{card.Sold} lei</SumText>
+                            <SumText>Sold</SumText>
+                            <SumText>{card.Sold} RON</SumText>
                         </Sum>
                     </MoneyContainer>
                 </RightContainer>

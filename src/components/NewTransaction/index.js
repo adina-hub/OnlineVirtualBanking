@@ -25,21 +25,41 @@ export default function NewTransactionSection() {
 
 
     function createTransaction(title, to, from, value, currency) {
+        var currencyyy;
+        if(currency === "euro"){
+            currencyyy = 'EUR';
+        }
+        else if(currency === 'lei'){
+            currencyyy = 'RON';
+        }
+        else if(currency === 'pounds'){
+            currencyyy = 'GBP';
+        }
         firebase.database().ref('Transaction').push({
             customerId: auth.currentUser.uid,
             title: title,
             from: to,
             to: from,
             value: value,
-            currency: currency,
+            currency: currencyyy,
             date: new Date(firebase.firestore.Timestamp.now().seconds*1000).toLocaleDateString()
         })
     }
 
-    async function modifySold(value){
+    async function modifySold(currency, value){
         var sold = parseInt(card.Sold);
         var val = parseInt(value);
-        var newSold = sold - val;
+        var param = 0;
+        if(currency === "euro"){
+            param = 4.88;
+        }
+        else if(currency === 'lei'){
+            param = 1;
+        }
+        else if(currency === 'pounds'){
+            param = 5.47;
+        }
+        var newSold = sold - val*param;
         firebase.database().ref('Card/' + auth.currentUser.uid).update({Sold: String(newSold)}); 
     }
 
@@ -49,7 +69,7 @@ export default function NewTransactionSection() {
     
         try {
           createTransaction(titleRef.current.value, fromRef.current.value, toRef.current.value, valueRef.current.value, selected.current.value)
-          modifySold(valueRef.current.value)
+          modifySold(selected.current.value, valueRef.current.value)
           history.push("/transactions")
         } catch {
 

@@ -55,7 +55,6 @@ export const Label = styled.h3`
 export const Iban = styled.div`
     width: 350px;
     height: 60px;
-    background: #D3D3D3;
     border-radius: 5px;
     margin-bottom: 30px;
     display: flex;
@@ -67,7 +66,6 @@ export const Iban = styled.div`
 export const Cvv = styled.div`
     width: 150px;
     height: 60px;
-    background: #D3D3D3;
     border-radius: 5px;
     margin-bottom: 30px;
     display: flex;
@@ -86,11 +84,17 @@ export const Sum = styled.p`
     flex-direction: column;
     flex: 0.3;
     text-align: center;
+    background: #D3D3D3;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    padding-left: 15px;
+    padding-top: 6px;
 `
 
 export const TextH3 = styled.h3`
-    font-size: 15px;
-    color: #000;
+    font-size: 13px;
+    /* color: #000; */
+    color: green;
     font-weight: 600;
 `
 
@@ -98,10 +102,11 @@ export const Text = styled.h2`
     font-size: 22px;
     padding-top: 8px;
     color: #000000;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 `
 
 export const SumText = styled.h3`
     font-size: 20px;
     margin-bottom: 10px;
+    text-align: left;
 `
